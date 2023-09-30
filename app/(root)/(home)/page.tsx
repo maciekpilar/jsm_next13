@@ -34,7 +34,6 @@ const page = async ({ searchParams }: Props) => {
         (searchParams?.category && (
           <section className="flex-center mt-6 w-full flex-col sm:mt-20">
             <Header
-              title="Resources"
               query={searchParams?.query || ""}
               category={searchParams?.category || ""}
             />

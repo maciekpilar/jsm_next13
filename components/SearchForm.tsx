@@ -1,21 +1,23 @@
 "use client";
+
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import { Input } from "@/components/ui/input";
 import { formUrlQuery } from "@/sanity/utils";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 const SearchForm = () => {
-  const [search, setSearch] = useState("");
-
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
-    const delayDebounceFunction = setTimeout(() => {
+    const delayDebounceFn = setTimeout(() => {
       let newUrl = "";
+
       if (search) {
         newUrl = formUrlQuery({
           params: searchParams.toString(),
@@ -28,9 +30,11 @@ const SearchForm = () => {
           keysToRemove: ["query"],
         });
       }
+
       router.push(newUrl, { scroll: false });
     }, 300);
-    return () => clearTimeout(delayDebounceFunction);
+
+    return () => clearTimeout(delayDebounceFn);
   }, [search]);
 
   return (

@@ -1,6 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Props {
   id: string;
@@ -45,8 +46,8 @@ const ResourceCard = ({
           target="_blank"
           className="flex-center text-gradient_purple-blue body-semibold gap-1.5"
         >
-          Download Now{" "}
-          <Image src="/arrow-blue.svg" alt="arrow" width={13} height={10} />
+          Download Now
+          <Image src="/arrow-blue.svg" width={13} height={10} alt="arrow" />
         </Link>
       </CardContent>
     </Card>

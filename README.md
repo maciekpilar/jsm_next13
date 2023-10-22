@@ -1,7 +1,7 @@
 ![](./readmeImg/all-devices-black.png)
 # JSM Platform landingpage
 
-**Live Preview: [Here](jsm-next13-taupe.vercel.app)**
+**Live Preview: [Here](https://jsm-next13-taupe.vercel.app)**
 
 Fully responsive and modern looking landingpage.
 
